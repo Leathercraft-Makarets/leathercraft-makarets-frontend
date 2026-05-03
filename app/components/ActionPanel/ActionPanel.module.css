@@ -1,0 +1,436 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #F5EDE8;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.breadcrumbs span {
+  color: #333;
+}
+
+.productLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 768px) {
+  .productLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.imagePlaceholder {
+  background-color: #f0f0f0;
+  background-image: url("https://i.ibb.co/b5PBj3Pm/status-anxiety-wallet-is-now-better-black-3-lifestyle-img-234234.jpg");
+  /* background-image: repeating-conic-gradient(#f4f4f4 0% 25%, #eaeaea 0% 50%); */
+  background-size: 500px 500px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.mainImage {
+  aspect-ratio: 1 / 1;
+  margin-bottom: 16px;
+}
+
+.arrowBtn {
+  background: transparent;
+  border: none;
+  font-size: 100px;
+  color: #888;
+  cursor: pointer;
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.thumbnail {
+  aspect-ratio: 1 / 1;
+  background-size: 200px 200px; 
+}
+
+.thumbnailFirstItem {
+  background-image: url("https://i.ibb.co/5xXsDTSC/status-anxiety-wallet-visions-cocoa-3-lifestyle-img.webp");
+}
+
+.thumbnailSecondItem {
+  background-image: url("https://i.ibb.co/b5PBj3Pm/status-anxiety-wallet-is-now-better-black-3-lifestyle-img-234234.jpg");
+}
+
+.thumbnailThirdItem {
+  background-image: url("https://i.ibb.co/Y4K2WRQ3/Manita-Womens-Wallet-Green-Cactus-Leater-Vegan-Texcoco-Collective-Model-Product-Shot-1200x.webp");
+}
+
+.actionsRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qtyBtn, .qtyInput {
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.qtyBtn {
+  font-size: 20px;
+}
+
+.qtyInput {
+  font-size: 18px;
+  border: none;
+  font-weight: bold;
+}
+
+.addToCart {
+  flex-grow: 1;
+  color: #ffffff;
+  background-color: #E22D2D;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.addToCart:hover {
+  background-color: #aa0d0d;
+}
+
+.favoriteBtn {
+  background-color: #d8dcd8;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rating {
+  font-size: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.section {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.colorsList {
+  display: flex;
+  gap: 12px;
+}
+
+.colorSwatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.specsTable {
+  display: flex;
+  flex-direction: column;
+}
+
+.specRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.specRow:last-child {
+  border-bottom: none;
+}
+
+.specLabel {
+  color: #666;
+}
+
+.specValue {
+  font-weight: 500;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  background-color: #fcfcf5;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.imageBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: #f0f0f0;
+  background-image: repeating-conic-gradient(#f4f4f4 0% 25%, #eaeaea 0% 50%);
+  background-size: 20px 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(100, 100, 100, 0.75);
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.textInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.currentPrice {
+  font-size: 14px;
+  color: #333;
+}
+
+.oldPrice {
+  font-size: 12px;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.favButton {
+  background-color: #d8dcd8;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #555;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+
+.favButton:hover {
+  background-color: #c8ccc8;
+}
+
+.cartButton {
+  width: 100%;
+  background-color: #E22D2D;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #F5EDE8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.cartButton:hover {
+  background-color: #aa0d0d;
+}
+
+.breadcrumbLink {
+  text-decoration: none;
+  color: #333333;
+}
+
+.breadcrumbLink:hover {
+  text-decoration: underline;
+  text-decoration-color: #333333;
+}
+
+.activeThumbnail {
+  border: 2px solid #333333;
+  opacity: 1;
+}
+
+.thumbnail {
+  aspect-ratio: 1 / 1;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, border 0.2s ease;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.imagePlaceholder {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.activeThumbnail {
+  border: 2px solid #333333;
+  opacity: 1;
+}
+
+.colorSwatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.activeSwatch {
+  outline: 2px solid #333333;
+  outline-offset: 2px;
+  border-color: rgba(0,0,0,0.2);
+}
