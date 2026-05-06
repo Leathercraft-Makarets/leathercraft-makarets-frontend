@@ -1,0 +1,166 @@
+.catalogSection {
+  padding: 80px 0 60px 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Стиль карточки */
+.card {
+  position: relative;
+  height: 300px;
+  width: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Фонове зображення */
+.cardBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .cardBackground {
+  transform: scale(1.05);
+}
+
+/* Оверлей для затемнення */
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+/* Контент карточки */
+.cardContent {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  color: #fff;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cardDescription {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: auto;
+}
+
+/* Кнопка */
+.cardButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #E22D2D;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  align-self  : flex-end;
+  flex-shrink: 0; /* Забороняємо кнопці стискатися */
+  margin-bottom: 10px;
+}
+
+.cardButton:hover {
+  background-color: #aa0d0d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #1a1a1a;
+}
+
+.buttonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonIcon svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+/* Адаптивність */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    height: 280px;
+  }
+  
+  .sectionTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card {
+    height: 250px;
+  }
+  
+  .sectionTitle {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .catalogSection {
+    padding: 60px 0 40px 0;
+  }
+}
