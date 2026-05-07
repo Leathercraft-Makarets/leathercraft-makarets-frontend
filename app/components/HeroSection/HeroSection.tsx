@@ -27,7 +27,7 @@ export default function HeroSection() {
   }, []);
 
   const bannerImageUrl = 
-    "https://images.stockcake.com/public/6/e/1/6e1028dd-0ea7-4b07-8837-c9f98f4bebfa_large/gothic-luxury-elegance-stockcake.jpg";
+    "https://images.stockcake.com/public/7/c/0/7c0339e0-8046-4fff-99c2-0fdfb5acdb44_large/weathered-leather-craft-stockcake.jpg";
 
   return (
     <section ref={heroRef} className={styles.heroSection}>
@@ -41,6 +41,12 @@ export default function HeroSection() {
       <div className={styles.overlay} />
       
       <div className={styles.content}>
+        {/* Назва магазину */}
+        <h1 className={styles.brandName}>Leathercraft Makarets</h1>
+        
+        {/* Слоган */}
+        <p className={styles.tagline}>Аксесуари, що мають характер.</p>
+
         <div className={styles.buttonContainer}>
           <Link href="#catalog" className={styles.catalogButton} aria-label="Перейти до каталогу">
             <span className={styles.catalogIcon}>
