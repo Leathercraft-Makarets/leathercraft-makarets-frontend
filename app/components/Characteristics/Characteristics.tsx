@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import styles from './Characteristics.module.css';
-import ArrowUpLogo from '../../logo/ArrowUpLogo/ArrowUpLogo.svg';
+import ArrowUpLogo from '@/logo/ArrowUpLogo/ArrowUpLogo.svg';
 import { useState } from 'react';
 
 const Characteristics = () => {

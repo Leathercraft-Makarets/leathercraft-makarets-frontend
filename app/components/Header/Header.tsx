@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.css';
-import LeathercraftMakaretsLogo from "../../../app/logo/LeathercraftMakaretsLogo/LeathercraftMakaretsLogo.svg";
+import LeathercraftMakaretsLogo from "@/logo/LeathercraftMakaretsLogo/LeathercraftMakaretsLogo.svg";
 
 export default function Header() {
   return (

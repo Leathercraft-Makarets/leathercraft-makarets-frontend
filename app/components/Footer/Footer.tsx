@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Footer.module.css';
-import LeathercraftMakaretsLogo from "../../../app/logo/LeathercraftMakaretsLogo/LeathercraftMakaretsLogo.svg";
-import InstagramLogo from '../../../app/logo/InstagramLogo/InstagramLogo.png';
-import FacebookLogo from '../../../app/logo/FacebookLogo/FacebookIcon.png';
-import XLogo from '../../../app/logo/XLogo/XLogo.png';
-import TikTokLogo from '../../../app/logo/TikTokLogo/TikTokLogo.svg';
-import TelegramLogo from '../../../app/logo/TelegramLogo/TelegramLogo.png';
+import LeathercraftMakaretsLogo from "@/logo/LeathercraftMakaretsLogo/LeathercraftMakaretsLogo.svg";
+import InstagramLogo from '@/logo/InstagramLogo/InstagramLogo.png';
+import FacebookLogo from '@/logo/FacebookLogo/FacebookIcon.png';
+import XLogo from '@/logo/XLogo/XLogo.png';
+import TikTokLogo from '@/logo/TikTokLogo/TikTokLogo.svg';
+import TelegramLogo from '@/logo/TelegramLogo/TelegramLogo.png';
 
 export default function Footer() {
   return (

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import styles from './Colors.module.css';
-import ArrowUpLogo from '../../logo/ArrowUpLogo/ArrowUpLogo.svg';
+import ArrowUpLogo from '@/logo/ArrowUpLogo/ArrowUpLogo.svg';
 
 const COLORS = [
   '#E22D2D', 

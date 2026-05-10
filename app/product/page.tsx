@@ -1,6 +1,6 @@
 'use client';
 
-import styles from "./ProductPage.module.css";
+import styles from "./page.module.css";
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import LeftColumn from "@/components/LeftColumn/LeftColumn";
 import RightColumn from "@/components/RightColumn/RightColumn";

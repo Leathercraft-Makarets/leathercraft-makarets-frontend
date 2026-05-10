@@ -1,13 +1,7 @@
-'use client';
-
-import MainPage from "@/main-page/page";
+import MainPageContent from "@/main-page/MainPageContent";
 
 const Home = () => {
-  return (
-    <>
-      <MainPage />
-    </>
-  );
+  return <MainPageContent />;
 }
 
 export default Home;

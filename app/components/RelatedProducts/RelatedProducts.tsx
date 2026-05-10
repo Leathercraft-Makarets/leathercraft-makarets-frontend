@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './RelatedProducts.module.css';
-import { MOCK_PRODUCTS } from '../../data/MockProducts';
+import { MOCK_PRODUCTS } from '@/data/MockProducts';
 import HeartButton from '../HeartButton/HeartButton';
 
 export default function RelatedProducts() {

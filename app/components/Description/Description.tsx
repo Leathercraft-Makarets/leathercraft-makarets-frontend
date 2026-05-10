@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import styles from './Description.module.css';
-import ArrowUpLogo from '../../logo/ArrowUpLogo/ArrowUpLogo.svg';
+import ArrowUpLogo from '@/logo/ArrowUpLogo/ArrowUpLogo.svg';
 
 const Description = () => {
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(true);
