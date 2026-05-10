@@ -1,11 +1,11 @@
 'use client';
 
-import ProductPage from "./pages/ProductPage/ProductPage";
+import MainPage from "@/main-page/page";
 
 const Home = () => {
   return (
     <>
-      <ProductPage />
+      <MainPage />
     </>
   );
 }
