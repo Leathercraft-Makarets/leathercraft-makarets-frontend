@@ -1,18 +1,15 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import PageLayout from "@/components/PageLayout/PageLayout";
+import PageHero from "@/components/PageHero/PageHero";
 import styles from "./page.module.css";
 
 export default function PrivacyPage() {
   return (
-    <div className={styles.page}>
-      <Header />
+    <PageLayout className={styles.page}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Політика конфіденційності</h1>
-        <p className={styles.description}>
-          Як ми обробляємо ваші персональні дані.
-        </p>
+        <PageHero
+          title="Політика конфіденційності"
+          description="Як ми обробляємо ваші персональні дані."
+        />
       </main>
-      <Footer />
-    </div>
-  );
+    </PageLayout>
 }

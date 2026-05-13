@@ -1,19 +1,16 @@
 "use client";
 
-import Header from "@/components/Header/Header";
+import PageLayout from "@/components/PageLayout/PageLayout";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import CatalogGrid from "@/components/CatalogGrid/CatalogGrid";
 import AboutSection from "@/components/AboutSection/AboutSection";
 import NewArrivalsSection from "@/components/NewArrivalsSection/NewArrivalsSection";
 import ReviewsSection from "@/components/ReviewsSection/ReviewsSection";
 import FaqSection from "@/components/FaqSection/FaqSection";
-import Footer from "@/components/Footer/Footer";
-import styles from "./page.module.css";
 
 export default function MainPageContent() {
   return (
-    <>
-      <Header />
+    <PageLayout>
       <HeroSection />
       <div id="catalog">
         <CatalogGrid />
@@ -24,7 +21,6 @@ export default function MainPageContent() {
       <NewArrivalsSection />
       <ReviewsSection />
       <FaqSection />
-      <Footer />
-    </>
+    </PageLayout>
   );
 }

@@ -1,0 +1,31 @@
+.hero {
+  padding: 64px 0;
+  background-color: #f7f1ec;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.title {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  line-height: 1.05;
+  color: #111;
+}
+
+.description {
+  margin: 0;
+  max-width: 760px;
+  color: #4b4b4b;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 48px 0;
+  }
+}

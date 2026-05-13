@@ -1,3 +1,4 @@
+import PageLayout from '@/components/PageLayout/PageLayout';
 import Checkout from '@/components/Checkout/Checkout';
 import styles from './page.module.css';
 
@@ -17,8 +18,8 @@ export default function CheckoutPage() {
   const totalPrice = 780;
 
   return (
-    <div className={styles.page}>
+    <PageLayout className={styles.page}>
       <Checkout cartItems={cartItems} totalPrice={totalPrice} />
-    </div>
+    </PageLayout>
   );
 }

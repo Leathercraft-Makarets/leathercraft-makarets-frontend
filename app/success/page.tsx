@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import PageLayout from '@/components/PageLayout/PageLayout';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import styles from "./page.module.css";
 
 export default function SuccessPage() {
@@ -48,19 +50,15 @@ export default function SuccessPage() {
   };
 
   return (
-    <div className={styles.container}>
-      <nav className={styles.breadcrumbs}>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-        </svg>
-        <span>
-          / <Link className={styles.breadcrumbLink} href="/catalog">Каталог</Link>
-          / <Link className={styles.breadcrumbLink} href="/cart">Кошик</Link>
-          / <Link className={styles.breadcrumbLink} href="/checkout">Оформити замовлення</Link>
-          / <span>Замовлення</span>
-        </span>
-      </nav>
+    <PageLayout className={styles.container}>
+      <Breadcrumbs
+        items={[
+          { label: 'Каталог', href: '/catalog' },
+          { label: 'Кошик', href: '/cart' },
+          { label: 'Оформити замовлення', href: '/checkout' },
+          { label: 'Замовлення' }
+        ]}
+      />
 
       <div className={styles.successContent}>
         <div className={styles.successIcon}>
@@ -181,6 +179,6 @@ export default function SuccessPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 }

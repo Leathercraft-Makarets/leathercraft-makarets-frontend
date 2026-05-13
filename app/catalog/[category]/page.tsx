@@ -1,5 +1,5 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import PageLayout from "@/components/PageLayout/PageLayout";
+import PageHero from "@/components/PageHero/PageHero";
 import styles from "../page.module.css";
 
 interface CategoryPageProps {
@@ -21,15 +21,13 @@ export default function CategoryPage({ params }: CategoryPageProps) {
   const title = categoryTitles[params.category] || 'Каталог';
 
   return (
-    <div className={styles.page}>
-      <Header />
+    <PageLayout className={styles.page}>
       <main className={styles.main}>
-        <h1 className={styles.title}>{title}</h1>
-        <p className={styles.description}>
-          Переглядайте доступні товари в категорії «{params.category}».
-        </p>
+        <PageHero
+          title={title}
+          description={`Переглядайте доступні товари в категорії «${params.category}».`}
+        />
       </main>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }

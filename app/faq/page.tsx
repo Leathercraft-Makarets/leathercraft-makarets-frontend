@@ -1,18 +1,15 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import PageLayout from "@/components/PageLayout/PageLayout";
+import PageHero from "@/components/PageHero/PageHero";
 import styles from "./page.module.css";
 
 export default function FaqPage() {
   return (
-    <div className={styles.page}>
-      <Header />
+    <PageLayout className={styles.page}>
       <main className={styles.main}>
-        <h1 className={styles.title}>FAQ</h1>
-        <p className={styles.description}>
-          Часті запитання та відповіді.
-        </p>
+        <PageHero
+          title="FAQ"
+          description="Часті запитання та відповіді."
+        />
       </main>
-      <Footer />
-    </div>
-  );
+    </PageLayout>
 }

@@ -1,20 +1,18 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import PageLayout from "@/components/PageLayout/PageLayout";
 import CatalogGrid from "@/components/CatalogGrid/CatalogGrid";
+import PageHero from "@/components/PageHero/PageHero";
 import styles from "./page.module.css";
 
 export default function CatalogPage() {
   return (
-    <div className={styles.page}>
-      <Header />
+    <PageLayout className={styles.page}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Каталог</h1>
-        <p className={styles.description}>
-          Оберіть категорію та знайдіть найкращі шкіряні вироби.
-        </p>
+        <PageHero
+          title="Каталог"
+          description="Оберіть категорію та знайдіть найкращі шкіряні вироби."
+        />
         <CatalogGrid />
       </main>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }

@@ -1,7 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import styles from './Cart.module.css';
 
 // Типи даних
@@ -63,8 +65,6 @@ const Cart = () => {
     }
   ];
 
-  // Кількість товарів у кошику
-  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
   // Видалення товару з кошика
@@ -87,17 +87,12 @@ const Cart = () => {
 
   return (
     <div className={styles.container}>
-      {/* Хлібні крихти */}
-      <nav className={styles.breadcrumbs}>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-        </svg>
-        <span>
-          / <Link className={styles.breadcrumbLink} href="/catalog">Каталог</Link>
-          / <span>Кошик</span>
-        </span>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { label: 'Каталог', href: '/catalog' },
+          { label: 'Кошик' }
+        ]}
+      />
 
       <h1 className={styles.pageTitle}>Кошик</h1>
 
@@ -108,7 +103,14 @@ const Cart = () => {
             {cartItems.map(item => (
               <div key={item.id} className={styles.cartItem}>
                 <div className={styles.itemImage}>
-                  <img src={item.image} alt={item.name} />
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={100}
+                    height={100}
+                    className={styles.image}
+                    unoptimized
+                  />
                 </div>
                 
                 <div className={styles.itemInfo}>
@@ -185,7 +187,14 @@ const Cart = () => {
               {recommendedProducts.map(product => (
                 <div key={product.id} className={styles.productCard}>
                   <div className={styles.productImage}>
-                    <img src={product.image} alt={product.name} />
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      width={280}
+                      height={220}
+                      style={{ borderRadius: 16, objectFit: 'cover' }}
+                      unoptimized
+                    />
                     {product.badges && (
                       <div className={styles.badges}>
                         {product.badges.map((badge, idx) => (

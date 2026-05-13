@@ -1,18 +1,15 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import PageLayout from "@/components/PageLayout/PageLayout";
+import PageHero from "@/components/PageHero/PageHero";
 import styles from "./page.module.css";
 
 export default function WishlistPage() {
   return (
-    <div className={styles.page}>
-      <Header />
+    <PageLayout className={styles.page}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Улюблене</h1>
-        <p className={styles.description}>
-          Тут будуть товари, які ви додали до улюблених.
-        </p>
+        <PageHero
+          title="Улюблене"
+          description="Тут будуть товари, які ви додали до улюблених."
+        />
       </main>
-      <Footer />
-    </div>
-  );
+    </PageLayout>
 }

@@ -1,13 +1,10 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import PageLayout from "@/components/PageLayout/PageLayout";
 import Cart from "@/components/Cart/Cart";
 
 export default function CartPage() {
   return (
-    <>
-      <Header />
+    <PageLayout>
       <Cart />
-      <Footer />
-    </>
+    </PageLayout>
   );
 }

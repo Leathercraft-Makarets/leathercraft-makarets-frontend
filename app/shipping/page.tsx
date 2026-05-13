@@ -1,18 +1,15 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import PageLayout from "@/components/PageLayout/PageLayout";
+import PageHero from "@/components/PageHero/PageHero";
 import styles from "./page.module.css";
 
 export default function ShippingPage() {
   return (
-    <div className={styles.page}>
-      <Header />
+    <PageLayout className={styles.page}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Доставка</h1>
-        <p className={styles.description}>
-          Інформація про умови доставки та оплати.
-        </p>
+        <PageHero
+          title="Доставка"
+          description="Інформація про умови доставки та оплати."
+        />
       </main>
-      <Footer />
-    </div>
-  );
+    </PageLayout>
 }

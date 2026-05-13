@@ -1,18 +1,15 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import PageLayout from "@/components/PageLayout/PageLayout";
+import PageHero from "@/components/PageHero/PageHero";
 import styles from "./page.module.css";
 
 export default function ReturnsPage() {
   return (
-    <div className={styles.page}>
-      <Header />
+    <PageLayout className={styles.page}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Повернення</h1>
-        <p className={styles.description}>
-          Умови повернення товарів та коштів.
-        </p>
+        <PageHero
+          title="Повернення"
+          description="Умови повернення товарів та коштів."
+        />
       </main>
-      <Footer />
-    </div>
-  );
+    </PageLayout>
 }

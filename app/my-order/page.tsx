@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import PageLayout from '@/components/PageLayout/PageLayout';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import styles from './page.module.css';
 
 export default function MyOrderPage() {
@@ -38,18 +40,16 @@ export default function MyOrderPage() {
   };
 
   return (
-    <div className={styles.container}>
-      <nav className={styles.breadcrumb}>
-        <Link href="/">🏠</Link>
-        <span className={styles.breadcrumbSeparator}>/</span>
-        <Link href="/catalog">Каталог</Link>
-        <span className={styles.breadcrumbSeparator}>/</span>
-        <Link href="/cart">Кошик</Link>
-        <span className={styles.breadcrumbSeparator}>/</span>
-        <Link href="/checkout">Оформити замовлення</Link>
-        <span className={styles.breadcrumbSeparator}>/</span>
-        <span>Замовлення</span>
-      </nav>
+    <PageLayout className={styles.container}>
+
+      <Breadcrumbs
+        items={[
+          { label: 'Головна', href: '/' },
+          { label: 'Каталог', href: '/catalog' },
+          { label: 'Кошик', href: '/cart' },
+          { label: 'Замовлення' }
+        ]}
+      />
 
       <main className={styles.main}>
         <h1 className={styles.orderTitle}>
@@ -145,6 +145,6 @@ export default function MyOrderPage() {
           </Link>
         </div>
       </main>
-    </div>
+    </PageLayout>
   );
 }

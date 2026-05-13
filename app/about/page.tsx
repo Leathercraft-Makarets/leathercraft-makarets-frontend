@@ -1,19 +1,16 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import PageLayout from "@/components/PageLayout/PageLayout";
+import PageHero from "@/components/PageHero/PageHero";
 import styles from "./page.module.css";
 
 export default function AboutPage() {
   return (
-    <div className={styles.page}>
-      <Header />
+    <PageLayout className={styles.page}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Про нас</h1>
-        <p className={styles.description}>
-          Ми — команда майстрів, які створюють якісні шкіряні вироби ручної роботи.
-          Наша місія — поєднати традиції ремесла з сучасним дизайном.
-        </p>
+        <PageHero
+          title="Про нас"
+          description="Ми — команда майстрів, які створюють якісні шкіряні вироби ручної роботи. Наша місія — поєднати традиції ремесла з сучасним дизайном."
+        />
       </main>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 }

@@ -5,26 +5,26 @@ import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import LeftColumn from "@/components/LeftColumn/LeftColumn";
 import RightColumn from "@/components/RightColumn/RightColumn";
 import RelatedProducts from "@/components/RelatedProducts/RelatedProducts";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import PageLayout from "@/components/PageLayout/PageLayout";
 
 export default function ProductPage() {
   return (
-    <>
-      <div className={styles.wrapper}>
-        <Header />
-        <div className={styles.container}>
-          <Breadcrumbs />
-          <div className={styles.productLayout}>
-            <LeftColumn />
-            <RightColumn />
-          </div>
-          <div className={styles.container}>
-            <RelatedProducts />
-          </div>
+    <PageLayout className={styles.wrapper}>
+      <div className={styles.container}>
+        <Breadcrumbs
+          items={[
+            { label: 'Каталог', href: '/catalog' },
+            { label: 'Товар' }
+          ]}
+        />
+        <div className={styles.productLayout}>
+          <LeftColumn />
+          <RightColumn />
         </div>
-        <Footer />
+        <div className={styles.container}>
+          <RelatedProducts />
+        </div>
       </div>
-    </>
+    </PageLayout>
   );
 }

@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import styles from './Checkout.module.css';
 
 interface CheckoutProps {
@@ -91,18 +93,13 @@ const Checkout: React.FC<CheckoutProps> = ({
 
   return (
     <div className={styles.container}>
-      {/* Хлібні крихти */}
-      <nav className={styles.breadcrumbs}>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-        </svg>
-        <span>
-          / <Link className={styles.breadcrumbLink} href="/catalog">Каталог</Link>
-          / <Link className={styles.breadcrumbLink} href="/cart">Кошик</Link>
-          / <span>Оформити замовлення</span>
-        </span>
-      </nav>
+      <Breadcrumbs
+        items={[
+          { label: 'Каталог', href: '/catalog' },
+          { label: 'Кошик', href: '/cart' },
+          { label: 'Оформити замовлення' }
+        ]}
+      />
 
       <h1 className={styles.pageTitle}>Оформлення замовлення</h1>
 
@@ -330,7 +327,14 @@ const Checkout: React.FC<CheckoutProps> = ({
             {cartItems.map(item => (
               <div key={item.id} className={styles.summaryItem}>
                 <div className={styles.summaryItemImage}>
-                  <img src={item.image} alt={item.name} />
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={90}
+                    height={90}
+                    className={styles.summaryItemImageInner}
+                    unoptimized
+                  />
                 </div>
                 <div className={styles.summaryItemInfo}>
                   <h3 className={styles.summaryItemName}>{item.name}</h3>
