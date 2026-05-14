@@ -12,4 +12,5 @@ export default function FaqPage() {
         />
       </main>
     </PageLayout>
+  );
 }

@@ -1,0 +1,89 @@
+.container {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+}
+
+.infoCard {
+  background: #e8e8e8;
+  padding: 32px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.infoField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.editButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background-color: #E22D2D;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.editButton:hover {
+  background-color: #aa0d0d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .infoCard {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .value {
+    font-size: 16px;
+  }
+
+  .editButton {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 24px;
+  }
+}
