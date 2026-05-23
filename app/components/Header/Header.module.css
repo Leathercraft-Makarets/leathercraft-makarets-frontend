@@ -525,3 +525,103 @@
   color: #E22D2D;
 }
 
+/* Базовий стан сендвіча для ПК (прихований) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  color: inherit; /* бере колір тексту вашого хедера */
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s ease;
+}
+
+/* ======================================================= */
+/* МЕДІА-ЗАПИТ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ                     */
+/* ======================================================= */
+@media (max-width: 900px) {
+  .header {
+    padding: 10px 15px !important; /* робимо висоту хедера компактнішою */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Положення логотипу ідеально по центру екрана */
+  .logoContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .headerLogo {
+    max-width: 130px !important; /* оптимізована ширина логотипу */
+    height: auto !important;
+  }
+
+  /* Показуємо кнопку-сендвіч */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Анімація перетворення ліній сендвіча на хрестик 'Х' */
+  .hamburgerActive span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburgerActive span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburgerActive span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Перетворюємо горизонтальне навігаційне меню на вертикальне висувне */
+  .nav {
+    position: fixed;
+    top: 40;
+    left: -100%; /* за замовчуванням сховане зліва за межами екрана */
+    width: 90px;
+    height: 25vh;
+    background-color: #F5EBE6; /* колір фону меню, можете змінити під свій */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 50px 30px 30px 30px;
+    gap: 12px;
+    transition: left 0.8s ease;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  /* Клас, який активується при кліку на сендвіч */
+  .navActive {
+    left: 0; /* меню плавно виїжджає на екран */
+  }
+
+  .navLink {
+    font-size: 18px !important;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  /* Компактні відступи для кнопок дій (профіль, кошик) */
+  .actions {
+    gap: 12px !important;
+  }
+}
+
