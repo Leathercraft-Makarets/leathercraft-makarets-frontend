@@ -445,9 +445,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 48px;
-  height: 80px; /* Висота шапки, можете налаштувати під себе */
-  background-color: #F5EBE6; /* Приємний бежевий відтінок фону */
+  height: 90px;
+  background-color: #F5EBE6cc; 
+  
+  /* Ефект розмиття контенту під хедером */
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Для підтримки Safari */
+  
+  /* Легка тінь для розділення */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  
+  /* Плавна зміна, якщо колір десь буде оновлюватися */
+  transition: background-color 0.3s ease; 
 }
 
 .nav {
