@@ -24,7 +24,7 @@ export default function AboutSection() {
               Ми віримо, що гаманець — це не просто аксесуар, а відображення вашого характеру. У MAKARETS ми поєднуємо традиційні методи обробки шкіри з сучасним дизайном. Кожен виріб створюється вручну з відібраних матеріалів, щоб забезпечити довговічність, до якої приємно торкатися.
             </p>
             
-            <Link href="/catalog#catalog" className={styles.learnMoreButton}>
+            <Link href="/about" className={styles.learnMoreButton}>
               Дізнатися більше
               <span className={styles.buttonIcon}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

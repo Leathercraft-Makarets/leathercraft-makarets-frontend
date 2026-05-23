@@ -1,4 +1,45 @@
-body {
+html {
+    scroll-behavior: smooth;
+}
+
+/* body {
     background-color: #F5EDE8;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+} */
+
+body {
+  font-family: var(--font-inter);
+}
+
+h1,
+h2,
+h3,
+.hero-title,
+.section-title {
+  font-family: var(--font-playfair);
+}
+
+.scrollToTopButton {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: #E22D2D;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.95;
+}
+
+.scrollToTopButton:hover {
+    transform: translateY(-2px);
+    opacity: 1;
 }

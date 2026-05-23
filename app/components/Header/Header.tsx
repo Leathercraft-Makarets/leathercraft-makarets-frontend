@@ -9,9 +9,9 @@ export default function Header() {
   return (
     <header className={styles.header}>
         <nav className={styles.nav}>
-            <Link href="/main-page" className={styles.navLink}>Головна</Link>
-            <Link href="/catalog" className={styles.navLink}>Каталог</Link>
-            <Link href="/about" className={styles.navLink}>Про нас</Link>
+            <Link href="/" className={styles.navLink}>Головна</Link>
+            <Link href="/#catalog" className={styles.navLink}>Каталог</Link>
+            <Link href="/#about" className={styles.navLink}>Про нас</Link>
             <Link href="/contacts" className={styles.navLink}>Контакти</Link>
         </nav>
         <div className={styles.logoContainer}>

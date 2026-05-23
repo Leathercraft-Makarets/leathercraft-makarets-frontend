@@ -88,7 +88,7 @@ const Checkout: React.FC<CheckoutProps> = ({
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     // Перехід на сторінку успішного замовлення
-    router.push('/checkout/success?order=1278');
+    router.push('/success');
   };
 
   return (

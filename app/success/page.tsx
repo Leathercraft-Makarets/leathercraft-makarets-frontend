@@ -36,7 +36,7 @@ export default function SuccessPage() {
       },
       {
         id: 2,
-        image: 'https://images.unsplash.com/photo-1606503825008-909a6184aeb4?w=300&h=300&fit=crop',
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjOZZljfbw5zPNF7Z73kJoBOQ2e74b5DFH4Q&s",
         name: 'Гаманець мінімаліст',
         description: 'Компактний, 4 відділення',
         price: 650,

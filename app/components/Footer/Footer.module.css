@@ -3,7 +3,6 @@
   padding: 64px 48px 32px;
   border-top: 1px solid #333333;
   color: #333333;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .container {
@@ -65,7 +64,7 @@
 }
 
 .link:hover {
-  color: #E22D2D; /* Фірмовий червоний акцент */
+  color: #E22D2D;
 }
 
 .socials {

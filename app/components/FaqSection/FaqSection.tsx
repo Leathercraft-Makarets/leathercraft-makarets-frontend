@@ -84,7 +84,7 @@ export default function FaqSection() {
         {/* Кнопка зв'язку (Cta) */}
         <div className={styles.ctaContainer}>
           <p className={styles.ctaText}>Не знайшли відповідь на своє запитання?</p>
-          <a href="/contact" className={styles.catalogButton}>
+          <a href="/contacts" className={styles.catalogButton}>
             Зв&apos;язатися з нами
           </a>
         </div>

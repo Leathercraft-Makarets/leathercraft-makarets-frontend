@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 24px;
   background-color: #F5EDE8;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #333;
 }
 
@@ -238,7 +237,6 @@
   margin: 0 auto;
   padding: 48px 24px;
   background-color: #fcfcf5;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .sectionTitle {
@@ -440,14 +438,16 @@
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 48px;
   height: 80px; /* Висота шапки, можете налаштувати під себе */
   background-color: #F5EBE6; /* Приємний бежевий відтінок фону */
-  border-bottom: 1px solid #333333; /* Тонка темна лінія знизу */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  backdrop-filter: blur(10px);
 }
 
 .nav {
