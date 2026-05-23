@@ -1,12 +1,14 @@
 "use client";
 
+import { Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import PageLayout from '@/components/PageLayout/PageLayout';
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import styles from "./page.module.css";
 
-export default function SuccessPage() {
+// 1. Створюємо внутрішній компонент, який використовує логіку пошукових параметрів
+function SuccessContent() {
   const searchParams = useSearchParams();
   const orderNumber = searchParams.get('order') || '1278';
   const currentTime = new Date().toLocaleString('uk-UA', {
@@ -84,7 +86,7 @@ export default function SuccessPage() {
           </svg>
           <p>
             Ми надіслали підтвердження на вашу електронну пошту.
-            Наш менеджер зв'яжеться з вами протягом 1-2 годин для уточнення деталей доставки.
+            Наш менеджер зв&apos;яжеться з вами протягом 1-2 годин для уточнення деталей доставки.
           </p>
         </div>
 
@@ -95,7 +97,7 @@ export default function SuccessPage() {
             <div className={styles.detailsColumn}>
               <h3 className={styles.detailsSubTitle}>Контактні дані</h3>
               <div className={styles.detailRow}>
-                <span className={styles.detailLabel}>Ім'я та прізвище:</span>
+                <span className={styles.detailLabel}>Ім&apos;я та прізвище:</span>
                 <span className={styles.detailValue}>{orderDetails.customer}</span>
               </div>
               <div className={styles.detailRow}>
@@ -180,5 +182,14 @@ export default function SuccessPage() {
         </div>
       </div>
     </PageLayout>
+  );
+}
+
+// 2. Головний експорт сторінки обгортає вміст у Suspense boundary
+export default function SuccessPage() {
+  return (
+    <Suspense fallback={<div style={{ padding: "50px", textAlign: "center" }}>Завантаження сторінки...</div>}>
+      <SuccessContent />
+    </Suspense>
   );
 }
