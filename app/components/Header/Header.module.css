@@ -525,6 +525,10 @@
   color: #E22D2D;
 }
 
+.link:hover {
+  color: #E22D2D;
+}
+
 /* Базовий стан сендвіча для ПК (прихований) */
 .hamburger {
   display: none;

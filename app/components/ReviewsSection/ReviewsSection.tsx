@@ -140,27 +140,6 @@ export default function ReviewsSection() {
               </div>
             ))}
           </div>
-
-          {/* Стрілки навігації */}
-          <button 
-            className={`${styles.navButton} ${styles.prevButton}`} 
-            onClick={prevSlide}
-            disabled={currentIndex === 0}
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-          
-          <button 
-            className={`${styles.navButton} ${styles.nextButton}`} 
-            onClick={nextSlide}
-            disabled={currentIndex + itemsPerScreen >= reviews.length}
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </button>
         </div>
 
         {/* Пагінація */}
