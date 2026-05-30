@@ -14,7 +14,7 @@ export default function ProductPage() {
         <Breadcrumbs
           items={[
             { label: 'Каталог', href: '/catalog' },
-            { label: 'Товар' }
+            { label: 'Товари', href: '/products' }
           ]}
         />
         <div className={styles.productLayout}>

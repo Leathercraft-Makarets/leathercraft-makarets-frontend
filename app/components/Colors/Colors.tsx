@@ -28,9 +28,9 @@ const Colors = () => {
         <span>Кольори</span>
         <span className={`${styles.iconWrapper} ${!isColorsOpen ? styles.iconRotated : ''}`}>
            <Image 
-             src={ArrowUpLogo} 
-             alt="Makarets Leathercraft" 
-             className={styles.arrowUpLogo}
+              src={ArrowUpLogo} 
+              alt="Makarets Leathercraft" 
+              className={styles.arrowUpLogo}
            />
         </span>
       </div>
