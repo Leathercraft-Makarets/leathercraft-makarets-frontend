@@ -1,6 +1,7 @@
 import PageLayout from "@/components/PageLayout/PageLayout";
 import PageHero from "@/components/PageHero/PageHero";
 import styles from "./page.module.css";
+import FavoritesList from '@/components/FavoritesList/FavoritesList';
 
 export default function WishlistPage() {
   return (
@@ -10,6 +11,7 @@ export default function WishlistPage() {
           title="Улюблене"
           description="Тут будуть товари, які ви додали до улюблених."
         />
+        <FavoritesList />
       </main>
     </PageLayout>
   );

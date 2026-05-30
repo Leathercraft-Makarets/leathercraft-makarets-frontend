@@ -7,6 +7,15 @@ import RightColumn from "@/components/RightColumn/RightColumn";
 import RelatedProducts from "@/components/RelatedProducts/RelatedProducts";
 import PageLayout from "@/components/PageLayout/PageLayout";
 
+const product = {
+  id: 101,
+  title: 'Шкіряний гаманець Makarets',
+  price: '1450 грн',
+  newPrice: '1290 грн',
+  oldPrice: '1650 грн',
+  imageUrl: '/images/product-101.jpg',
+};
+
 export default function ProductPage() {
   return (
     <PageLayout className={styles.wrapper}>
@@ -18,7 +27,7 @@ export default function ProductPage() {
           ]}
         />
         <div className={styles.productLayout}>
-          <LeftColumn />
+          <LeftColumn product={product} />
           <RightColumn />
         </div>
         <div className={styles.container}>

@@ -3,16 +3,19 @@
 import styles from './LeftColumn.module.css';
 import MainPhoto from '../MainPhoto/MainPhoto';
 import ActionPanel from '../ActionPanel/ActionPanel';
+import type { Product } from '@/store/useStore';
 
-const LeftColumn = () => {
+type Props = { product: Product };
+
+const LeftColumn = ({ product }: Props) => {
     return (
         <>
             <div className={styles.leftColumn}>
                 <MainPhoto />
-                <ActionPanel />
+                <ActionPanel product={product} />
             </div>
         </>
     );
-} 
+}
 
 export default LeftColumn;

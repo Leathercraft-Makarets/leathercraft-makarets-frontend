@@ -4,8 +4,11 @@ import { useState } from 'react';
 import styles from './ActionPanel.module.css';
 import HeartButton from '../HeartButton/HeartButton';
 import AddToCart from '../AddToCart/AddToCart';
+import type { Product } from '@/store/useStore';
 
-const ActionPanel = () => {
+type Props = { product: Product };
+
+const ActionPanel = ({ product }: Props) => {
     const [quantity, setQuantity] = useState(1);
 
     const decreaseQty = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
@@ -19,11 +22,11 @@ const ActionPanel = () => {
               <div className={styles.qtyInput}>{quantity}</div>
               <button className={styles.qtyBtn} onClick={increaseQty}>+</button>
             </div>
-            <AddToCart />
-            <HeartButton />
+            <AddToCart product={product} />
+            <HeartButton product={product} />
           </div>
         </>
     );
-} 
+}
 
 export default ActionPanel;
