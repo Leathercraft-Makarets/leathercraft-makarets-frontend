@@ -72,7 +72,7 @@ export default function CatalogGrid() {
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.cardDescription}>{item.description}</p>
                 
-                <Link href={item.href} className={styles.cardButton}>
+                <Link href={'/product-filter'} className={styles.cardButton}>
                   <span className={styles.buttonIcon}>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                       <rect x="3" y="3" width="7" height="7" rx="1" />

@@ -2,8 +2,8 @@
 
 import React from 'react';
 import styles from './FavoritesList.module.css';
-import HeartButton from '@/components/HeartButton/HeartButton';
 import { useStore } from '@/store/useStore';
+import ProductCard from '@/components/ProductCard/ProductCard'; // Імпортуємо готовий компонент
 
 export default function FavoritesList() {
   const favorites = useStore((s) => s.favorites);
@@ -12,20 +12,26 @@ export default function FavoritesList() {
     return <div className={styles.empty}>У вас ще немає улюблених товарів.</div>;
   }
 
-  return (
-    <div className={styles.favoritesGrid}>
-      {favorites.map((p) => (
-        <div key={p.id} className={styles.card}>
-          <div className={styles.imageBox} style={{ backgroundImage: p.imageUrl ? `url(${p.imageUrl})` : 'none' }} />
-          <div className={styles.infoRow}>
-            <div>
-              <h3 className={styles.productName}>{p.title}</h3>
-              <div className={styles.priceContainer}>{p.newPrice ?? p.price}</div>
-            </div>
-            <HeartButton product={p} />
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+ // Ось абсолютно той самий код, але з назвою 'product':
+return (
+  <div className={styles.favoritesGrid}>
+    {favorites.map((product) => { // Тепер тут 'product' замість 'p'
+      const adaptedProduct = {
+        id: product.id,
+        name: product.title || product.name,
+        price: product.newPrice ?? product.price,
+        image: product.image || product.imageUrl, // Тепер викликаємо через product.
+        badges: (product as any).badges || [],
+        description: (product as any).description || ''
+      };
+
+      return (
+        <ProductCard 
+          key={product.id} 
+          product={adaptedProduct as any} 
+        />
+      );
+    })}
+  </div>
+);
 }

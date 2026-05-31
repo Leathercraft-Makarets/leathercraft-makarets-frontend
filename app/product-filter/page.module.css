@@ -1,0 +1,33 @@
+.wrapper {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.shopContainer {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.mainContent {
+  flex-grow: 1;
+}
+
+/* Налаштування адаптивної сітки для карток */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .shopContainer {
+    flex-direction: column;
+  }
+}

@@ -11,11 +11,23 @@ const AddToCart: FC<Props> = ({ product, className = '', ...rest }) => {
 
     const handle = () => {
         if (!product) return;
-        addToCart(product);
+
+        // Створюємо адаптований об'єкт для кошика
+        const productForCart = {
+            ...product,
+            // Якщо у product немає поля price, але є currentPrice — використовуємо його
+            price: product.price || (product as any).currentPrice
+        };
+
+        addToCart(productForCart);
     };
 
     return (
-        <button className={[styles.addToCart, className].join(' ')} onClick={handle} {...rest}>
+        <button 
+            className={[styles.addToCart, className].join(' ')} 
+            onClick={handle} 
+            {...rest}
+        >
             Додати у кошик
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="9" cy="21" r="1"></circle>

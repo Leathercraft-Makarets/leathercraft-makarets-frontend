@@ -9,7 +9,7 @@ export default function WishlistPage() {
       <main className={styles.main}>
         <PageHero
           title="Улюблене"
-          description="Тут будуть товари, які ви додали до улюблених."
+          description="Товари, що полюбились вам."
         />
         <FavoritesList />
       </main>

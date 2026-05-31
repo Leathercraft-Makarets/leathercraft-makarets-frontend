@@ -4,7 +4,6 @@
   margin: 0 auto;
   padding: 48px 24px;
   background-color: #F5EDE8;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #333;
   margin-bottom: 20px;
 }
@@ -145,10 +144,10 @@
   color: #1a1a1a;
 }
 
-/* Оновлено для тегу <Link> */
+/* Кнопка оформлення замовлення */
 .checkoutButton {
   width: 100%;
-  max-width: 100%; /* Забезпечує, що кнопка не перевищить ширину батька */
+  max-width: 100%;
   background-color: #E22D2D;
   color: #ffffff;
   border: none;
@@ -156,19 +155,16 @@
   padding: 14px 20px;
   font-size: 16px;
   font-weight: 500;
-  
-  display: inline-flex; /* Для тегу Link */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  text-decoration: none; /* Прибираємо підкреслення */
+  text-decoration: none;
   cursor: pointer;
-  
   transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
-  
-  /* Додаємо box-sizing, щоб padding не збільшував ширину */
   box-sizing: border-box; 
 }
+
 .checkoutButton:hover {
   background-color: #aa0d0d;
   transform: translateY(-2px);
@@ -182,6 +178,7 @@
 /* Рекомендовані товари */
 .recommendedSection {
   margin-top: 64px;
+  width: 100%;
 }
 
 .recommendedHeader {
@@ -223,150 +220,12 @@
   color: #333;
 }
 
+/* Оновлена гнучка адаптивна сітка для нових ProductCard */
 .recommendedGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-}
-
-@media (max-width: 768px) {
-  .recommendedGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .recommendedGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.productCard {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.productImage {
-  position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  background-color: #f0f0f0;
-  background-image: repeating-conic-gradient(#f4f4f4 0% 25%, #eaeaea 0% 50%);
-  background-size: 20px 20px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.productImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.badges {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: rgba(100, 100, 100, 0.75);
-  color: #ffffff;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.productInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.productHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.productName {
-  font-size: 16px;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin: 0;
-  flex-grow: 1;
-}
-
-.favoriteBtn {
-  background-color: #d8dcd8;
-  border: none;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #555;
-  flex-shrink: 0;
-  transition: background-color 0.2s;
-}
-
-.favoriteBtn:hover {
-  background-color: #c8ccc8;
-}
-
-.priceContainer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.currentPrice {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
-}
-
-.oldPrice {
-  font-size: 14px;
-  color: #888;
-  text-decoration: line-through;
-}
-
-.addCartButton {
-  width: 100%;
-  background-color: #E22D2D;
-  border: none;
-  border-radius: 6px;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #ffffff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
-}
-
-.addCartButton:hover {
-  background-color: #aa0d0d;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.3);
-}
-
-.addCartButton:active {
-  transform: translateY(0);
 }
 
 /* Повідомлення про порожній кошик */
@@ -405,6 +264,12 @@
 }
 
 /* Адаптивність */
+@media (max-width: 900px) {
+  .recommendedGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .cartItem {
     grid-template-columns: 1fr;
@@ -430,5 +295,11 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+  }
+}
+
+@media (max-width: 580px) {
+  .recommendedGrid {
+    grid-template-columns: 1fr;
   }
 }

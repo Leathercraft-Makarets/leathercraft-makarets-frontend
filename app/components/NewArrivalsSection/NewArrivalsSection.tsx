@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import styles from "./NewArrivalsSection.module.css";
+// Імпортуємо готовий компонент з вашого проєкту
+import ProductCard from "@/components/ProductCard/ProductCard";
 
 // Дані для товарів
 const products = [
@@ -61,39 +63,34 @@ export default function NewArrivalsSection() {
 
         {/* Сітка товарів */}
         <div className={styles.productsGrid}>
-          {products.map((product) => (
-            <div key={product.id} className={styles.productCard}>
-              {/* Ярлики */}
-              <div className={styles.badges}>
-                {product.isNew && <span className={styles.badgeNew}>NEW</span>}
-                {product.isSale && <span className={styles.badgeSale}>{product.salePercent}</span>}
-              </div>
+          {products.map((item) => {
+            // Формуємо правильні бейджі
+            const productBadges: any[] = [];
+            if (item.isSale && item.salePercent) {
+              productBadges.push({ type: "discount", value: item.salePercent });
+            }
+            if (item.isNew) {
+              productBadges.push({ type: "new", value: "New" });
+            }
 
-              {/* Зображення */}
-              <div className={styles.productImage}>
-                <div 
-                  style={{ backgroundImage: `url(${product.image})` }}
-                />
-              </div>
+            // Адаптуємо об'єкт під формат ProductCardProps
+            const adaptedProduct = {
+              id: item.id,
+              name: item.title,
+              price: item.price,
+              oldPrice: item.oldPrice || undefined,
+              image: item.image,
+              badges: productBadges,
+              description: "", // додаємо пусту строку, якщо компонент її вимагає
+            };
 
-              {/* Інформація про товар */}
-              <div className={styles.productInfo}>
-                <span className={styles.productCategory}>{product.category}</span>
-                <h3 className={styles.productTitle}>{product.title}</h3>
-                
-                <div className={styles.priceBlock}>
-                  {product.oldPrice && (
-                    <span className={styles.oldPrice}>{product.oldPrice} ₴</span>
-                  )}
-                  <span className={styles.currentPrice}>{product.price} ₴</span>
-                </div>
-
-                <Link href={`/catalog#catalog`} className={styles.buyButton}>
-                  До кошика
-                </Link>
-              </div>
-            </div>
-          ))}
+            return (
+              <ProductCard 
+                key={item.id} 
+                product={adaptedProduct} 
+              />
+            );
+          })}
         </div>
 
         {/* Кнопка "Перейти до каталогу" */}
