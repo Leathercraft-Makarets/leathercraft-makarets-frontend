@@ -1,7 +1,7 @@
 .container {
   min-height: 100vh;
   padding: 40px 20px;
-  background-color: #F5EDE8;
+  background-color: #f8f8f8;
 }
 
 .breadcrumb {
@@ -84,7 +84,7 @@
   grid-template-columns: 120px 1fr 120px;
   gap: 20px;
   padding: 16px;
-  background: #f5f5f5;
+  background: #f8f8f8;
   border-radius: 8px 8px 0 0;
   font-weight: 600;
   color: #333;

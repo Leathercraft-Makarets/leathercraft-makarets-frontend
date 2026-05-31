@@ -2,11 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* body {
-    background-color: #F5EDE8;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-} */
-
 body {
   font-family: var(--font-playfair);
 }
@@ -29,12 +24,12 @@ h3,
     border: none;
     background-color: #E22D2D;
     color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     font-size: 1.25rem;
     font-weight: 700;
     cursor: pointer;
     display: grid;
     place-items: center;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease, opacity 0.2s ease;
     opacity: 0.95;
 }
