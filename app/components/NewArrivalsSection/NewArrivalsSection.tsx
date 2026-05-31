@@ -10,8 +10,8 @@ const products = [
   {
     id: 1,
     title: "Класичний гаманець",
-    price: 1200,
-    oldPrice: 1500,
+    price: '1200 ₴',
+    oldPrice: '1500 ₴',
     isNew: true,
     image: "https://images.unsplash.com/photo-1627123424574-724758594e93?q=80&w=400&auto=format&fit=crop",
     category: "Чоловічі"
@@ -19,8 +19,8 @@ const products = [
   {
     id: 2,
     title: "Сумка через плече",
-    price: 2400,
-    oldPrice: 3000,
+    price: '2400 ₴',
+    oldPrice: '3000 ₴',
     isSale: true,
     salePercent: "20%",
     image: "https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?q=80&w=400&auto=format&fit=crop",
@@ -29,8 +29,8 @@ const products = [
   {
     id: 3,
     title: "Гаманець з монетницею",
-    price: 950,
-    oldPrice: null,
+    price: '950 ₴',
+    oldPrice: '1000 ₴',
     isNew: true,
     image: "https://images.unsplash.com/photo-1559563458-527698bf5295?q=80&w=400&auto=format&fit=crop",
     category: "Акесуари"
@@ -38,8 +38,8 @@ const products = [
   {
     id: 4,
     title: "Ремень з ручним тисненням",
-    price: 1800,
-    oldPrice: 2200,
+    price: '1800 ₴',
+    oldPrice: '2200 ₴',
     isSale: true,
     salePercent: "18%",
     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=400&auto=format&fit=crop",
@@ -65,7 +65,7 @@ export default function NewArrivalsSection() {
         <div className={styles.productsGrid}>
           {products.map((item) => {
             // Формуємо правильні бейджі
-            const productBadges: any[] = [];
+            const productBadges: Array<{ type: 'hit' | 'discount' | 'new' | string; value?: string }> = [];
             if (item.isSale && item.salePercent) {
               productBadges.push({ type: "discount", value: item.salePercent });
             }

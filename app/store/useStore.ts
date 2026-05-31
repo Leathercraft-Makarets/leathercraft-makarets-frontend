@@ -7,8 +7,8 @@ export type Product = {
   id: number | string;
   title?: string;
   price?: number | string;
-  newPrice?: string;
-  oldPrice?: string;
+  newPrice?: number | string;
+  oldPrice?: number | string;
   image?: string;
 };
 

@@ -77,6 +77,7 @@
   margin-bottom: 20px;
   /* Ефект автоматичного обрізання тексту двома рядками з трьома крапками */
   display: -webkit-box;
+  line-clamp: 2;
   -webkit-line-clamp: 2; /* Кількість рядків, що відображаються (можна змінити на 1 або 3) */
   -webkit-box-orient: vertical;
   overflow: hidden;

@@ -1,5 +1,6 @@
 'use client';
 
+import type { ComponentProps } from 'react';
 import Image from 'next/image';
 import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import styles from './Cart.module.css';
@@ -12,7 +13,7 @@ interface CartItem {
   id: number | string;
   image: string;
   name: string;
-  description: string;
+  description?: string;
   price: number | string;
   quantity: number;
 }
@@ -183,7 +184,7 @@ const Cart = () => {
 
         <div className={styles.recommendedGrid}>
           {recommendedProducts.map(product => {
-            const adaptedProduct = {
+            const adaptedProduct: ComponentProps<typeof ProductCard>['product'] = {
               id: product.id,
               name: product.name,   
               description: product.description,
@@ -196,7 +197,7 @@ const Cart = () => {
             return (
               <ProductCard 
                 key={product.id} 
-                product={adaptedProduct as any} 
+                product={adaptedProduct} 
               />
             );
           })}

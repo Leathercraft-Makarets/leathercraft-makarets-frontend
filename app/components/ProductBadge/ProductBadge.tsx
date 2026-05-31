@@ -4,7 +4,7 @@ import styles from "./ProductBadge.module.css";
 
 interface BadgeItem {
   type: 'hit' | 'discount' | 'new' | string;
-  value: string;
+  value?: string;
 }
 
 interface ProductBadgeProps {

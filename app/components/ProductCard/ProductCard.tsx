@@ -9,14 +9,14 @@ import styles from "./ProductCard.module.css";
 
 interface BadgeItem {
   type: 'hit' | 'discount' | 'new' | string;
-  value: string;
+  value?: string;
 }
 
 interface Product {
   id: number | string;
   name: string;
-  price: string;
-  oldPrice?: string;
+  price: string | number;
+  oldPrice?: string | number;
   image: string;
   badges?: BadgeItem[];
   description?: string;
