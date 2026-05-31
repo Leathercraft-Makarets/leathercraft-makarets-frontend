@@ -13,7 +13,7 @@ const product = {
   price: '1450 грн',
   newPrice: '1290 грн',
   oldPrice: '1650 грн',
-  imageUrl: '/images/product-101.jpg',
+  image: '/images/product-101.jpg',
 };
 
 export default function ProductPage() {

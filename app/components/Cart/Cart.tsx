@@ -5,7 +5,17 @@ import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 import styles from './Cart.module.css';
 import { useStore } from '@/store/useStore';
 import Link from '@/components/UI/Link/Link';
-import ProductCard from '@/components/ProductCard/ProductCard'; // Імпортуємо ваш готовий компонент
+import ProductCard from '@/components/ProductCard/ProductCard';
+
+// Интерфейс для товаров в корзине (исправляет ошибки линтера на скриншоте)
+interface CartItem {
+  id: number | string;
+  image: string;
+  name: string;
+  description: string;
+  price: number | string;
+  quantity: number;
+}
 
 interface RecommendedProduct {
   id: number;
@@ -18,7 +28,8 @@ interface RecommendedProduct {
 }
 
 const Cart = () => {
-  const cartItems = useStore((s) => s.cart);
+  // Явно указываем тип для элементов корзины
+  const cartItems = useStore((s) => s.cart) as CartItem[];
   const removeItem = useStore((s) => s.removeFromCart);
   const updateQuantity = useStore((s) => s.updateCartQuantity);
 
@@ -66,7 +77,6 @@ const Cart = () => {
     return price ? String(price) : '0₴';
   };
 
-  // Розрахунок загальної суми кошика
   const totalPrice = cartItems.reduce((sum, item) => sum + getNumericPrice(item.price) * item.quantity, 0);
 
   return (
@@ -82,7 +92,6 @@ const Cart = () => {
 
       {cartItems.length > 0 ? (
         <>
-          {/* Список товарів у кошику */}
           <div className={styles.cartItems}>
             {cartItems.map(item => (
               <div key={item.id} className={styles.cartItem}>
@@ -137,7 +146,6 @@ const Cart = () => {
             ))}
           </div>
 
-          {/* Блок підсумку */}
           <div className={styles.summaryBox}>
             <div className={styles.summaryRow}>
               <span>Сума замовлення</span>
@@ -164,7 +172,6 @@ const Cart = () => {
         </div>
       )}
 
-      {/* Рекомендовані товари */}
       <div className={styles.recommendedSection}>
         <div className={styles.recommendedHeader}>
           <h2 className={styles.sectionTitle}>Рекомендовані товари</h2>

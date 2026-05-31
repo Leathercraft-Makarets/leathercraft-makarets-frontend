@@ -9,19 +9,20 @@ type Props = { product?: Product } & ButtonHTMLAttributes<HTMLButtonElement>;
 const AddToCart: FC<Props> = ({ product, className = '', ...rest }) => {
     const addToCart = useStore((s) => s.addToCart);
 
-    const handle = () => {
-        if (!product) return;
+const handle = () => {
+    if (!product) return;
 
-        // Створюємо адаптований об'єкт для кошика
-        const productForCart = {
-            ...product,
-            // Якщо у product немає поля price, але є currentPrice — використовуємо його
-            price: product.price || (product as any).currentPrice
-        };
+    // Створюємо тимчасовий тип, який дозволяє читати currentPrice як число або рядок
+    const productWithCurrentPrice = product as { currentPrice?: number | string };
 
-        addToCart(productForCart);
+    const productForCart = {
+        ...product,
+        // Тепер TypeScript офіційно знає про currentPrice і не свариться на types/any
+        price: product.price || productWithCurrentPrice.currentPrice
     };
 
+    addToCart(productForCart);
+};
     return (
         <button 
             className={[styles.addToCart, className].join(' ')} 

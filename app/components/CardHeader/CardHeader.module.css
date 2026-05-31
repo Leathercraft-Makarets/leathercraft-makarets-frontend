@@ -2,8 +2,8 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 24px;
-  background-color: #fcfcf5; /* Світло-бежевий фон як на макеті */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8f8f8; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   color: #333;
 }
 

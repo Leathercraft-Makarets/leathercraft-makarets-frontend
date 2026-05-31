@@ -1,6 +1,4 @@
 .addToCart {
-  width: 100%;
-  font-family: inherit;
   color: #ffffff;
   background-color: #E22D2D;
   border: none;
@@ -13,14 +11,9 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: background-color 0.2s;
 }
 
 .addToCart:hover {
   background-color: #aa0d0d;
-  transform: translateY(-2px);
-}
-
-.addToCart:active {
-  transform: scale(0.98);
 }

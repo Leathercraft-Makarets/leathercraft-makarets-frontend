@@ -9,7 +9,7 @@ export type Product = {
   price?: number | string;
   newPrice?: string;
   oldPrice?: string;
-  imageUrl?: string;
+  image?: string;
 };
 
 export type CartItem = Product & {
@@ -48,7 +48,8 @@ export const useStore = create<Store>()(
             )
           };
         }
-        return { cart: [...s.cart, { ...p, quantity: 1 }] };
+        const normalized = { ...p, image: (p as any).image, quantity: 1 };
+        return { cart: [...s.cart, normalized] };
       }),
       removeFromCart: (id) => set((s) => ({ cart: s.cart.filter(item => item.id !== id) })),
       updateCartQuantity: (id, delta) => set((s) => ({

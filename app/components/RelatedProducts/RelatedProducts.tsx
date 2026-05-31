@@ -16,7 +16,7 @@ export default function RelatedProducts() {
                             <div 
                                 className={styles.imageBox} 
                                 style={{ 
-                                    backgroundImage: product.imageUrl ? `url(${product.imageUrl})` : 'none',
+                                    backgroundImage: product.image ? `url(${product.image})` : 'none',
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center'
                                 }}
