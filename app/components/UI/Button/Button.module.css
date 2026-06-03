@@ -3,7 +3,7 @@
   align-items: center;
   gap: 10px;
   padding: 12px 24px;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: #fff;
   border: none;
   border-radius: 6px;

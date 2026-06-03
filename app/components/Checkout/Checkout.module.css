@@ -76,7 +76,7 @@
 }
 
 .sectionTitle svg {
-  color: #E22D2D;
+  color: var(--accent-color);
 }
 
 /* Форма */
@@ -125,7 +125,7 @@
 .input:focus,
 .textarea:focus {
   outline: none;
-  border-color: #E22D2D;
+  border-color: var(--accent-color);
   box-shadow: 0 0 0 3px rgba(226, 45, 45, 0.1);
 }
 
@@ -165,14 +165,14 @@
 }
 
 .radioLabel:hover {
-  border-color: #E22D2D;
+  border-color: var(--accent-color);
   background-color: rgba(226, 45, 45, 0.02);
 }
 
 .radioInput {
   width: 18px;
   height: 18px;
-  accent-color: #E22D2D;
+  accent-color: var(--accent-color);
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -210,7 +210,7 @@
 .checkboxInput {
   width: 18px;
   height: 18px;
-  accent-color: #E22D2D;
+  accent-color: var(--accent-color);
   cursor: pointer;
 }
 
@@ -221,7 +221,7 @@
 /* Кнопка відправки */
 .submitButton {
   width: 100%;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -396,7 +396,7 @@
 }
 
 .summaryNote svg {
-  color: #E22D2D;
+  color: var(--accent-color);
   flex-shrink: 0;
   margin-top: 2px;
 }

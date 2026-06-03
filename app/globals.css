@@ -14,6 +14,11 @@ h3,
   font-family: var(--font-geist);
 }
 
+:root {
+  --accent-color: #E22D2D;
+}
+
+
 .scrollToTopButton {
     position: fixed;
     right: 24px;
@@ -22,7 +27,7 @@ h3,
     height: 48px;
     border-radius: 50%;
     border: none;
-    background-color: #E22D2D;
+    background-color: var(--accent-color);
     color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     font-size: 1.25rem;
@@ -36,5 +41,6 @@ h3,
 
 .scrollToTopButton:hover {
     transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
     opacity: 1;
 }

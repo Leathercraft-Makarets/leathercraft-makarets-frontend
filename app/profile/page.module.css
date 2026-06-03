@@ -22,7 +22,7 @@
   gap: 8px;
   font-size: 16px;
   font-weight: 500;
-  color: #E22D2D;
+  color: var(--accent-color);
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 12px 24px;
@@ -30,7 +30,7 @@
 }
 
 .backLinkText:hover {
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);

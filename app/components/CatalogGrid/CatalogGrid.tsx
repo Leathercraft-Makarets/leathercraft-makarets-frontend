@@ -53,7 +53,9 @@ export default function CatalogGrid() {
   return (
     <section className={styles.catalogSection}>
       <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>Каталог гаманців</h2>
+        <h2 className={styles.sectionTitle}>
+  <span className={styles.accentText}>Каталог </span>гаманців</h2>
+
         
         <div className={styles.grid}>
           {catalogItems.map((item) => (

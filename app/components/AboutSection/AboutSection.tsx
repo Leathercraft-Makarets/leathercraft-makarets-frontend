@@ -18,7 +18,10 @@ export default function AboutSection() {
 
           {/* Контент праворуч */}
           <div className={styles.textContent}>
-            <h2 className={styles.title}>MAKARETS: Мистецтво в деталях</h2>
+            <h2 className={styles.title}>
+              MAKARETS: <span className={styles.accentText}>Мистецтво</span> в деталях
+            </h2>
+
             
             <p className={styles.description}>
               Ми віримо, що гаманець — це не просто аксесуар, а відображення вашого характеру. У MAKARETS ми поєднуємо традиційні методи обробки шкіри з сучасним дизайном. Кожен виріб створюється вручну з відібраних матеріалів, щоб забезпечити довговічність, до якої приємно торкатися.

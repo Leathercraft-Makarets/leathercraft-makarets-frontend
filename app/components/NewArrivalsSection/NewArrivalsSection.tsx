@@ -54,7 +54,7 @@ export default function NewArrivalsSection() {
         {/* Заголовок */}
         <div className={styles.header}>
           <h2 className={styles.title}>
-            Новинки та <span className={styles.highlight}>гарячі пропозиції</span>
+            Новинки та <span className={styles.accentText}>гарячі пропозиції</span>
           </h2>
           <p className={styles.subtitle}>
             Обирайте найкраще з нашої свіжої колекції

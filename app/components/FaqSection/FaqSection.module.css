@@ -68,7 +68,7 @@
 }
 
 .faqQuestion:hover {
-  color: #E22D2D;
+  color: var(--accent-color);
 }
 
 .questionText {
@@ -85,7 +85,7 @@
   justify-content: center;
   font-size: 24px;
   font-weight: 300;
-  color: #E22D2D;
+  color: var(--accent-color);
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
@@ -130,7 +130,7 @@
 /* Стилізація кнопки за пам'яттю користувача */
 .catalogButton {
   display: inline-block;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: #ffffff;
   border-radius: 6px;
   font-size: 16px;
@@ -171,4 +171,8 @@
     padding: 0 20px 16px 20px;
     font-size: 14px;
   }
+}
+
+.accentText {
+  color: var(--accent-color);
 }

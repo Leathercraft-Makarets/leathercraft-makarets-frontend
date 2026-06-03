@@ -105,7 +105,7 @@
   border-radius: 5px;
   transition: 0.5s;
   position: absolute;
-  color: #E22D2D;
+  color: var(--accent-color);
 }
 
 .checkboxInput:disabled {
@@ -223,7 +223,7 @@
   left: 20%;
   right: 20%;
   height: 2px;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
 }
 
 .rangeThumb {
@@ -232,7 +232,7 @@
   transform: translate(-50%, -50%);
   width: 14px;
   height: 14px;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -241,7 +241,7 @@
   height: 15px !important;
   width: 15px !important;
   object-fit: contain;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   padding: 5px;
   border-radius: 50%;
 }

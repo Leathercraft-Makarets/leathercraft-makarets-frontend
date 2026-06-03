@@ -94,7 +94,7 @@
 .newPrice {
   font-size: 20px;
   font-weight: 800;
-  color: #E22D2D;
+  color: var(--accent-color);
 }
 
 .oldPrice {
@@ -122,7 +122,7 @@
 }
 
 .titleLink:hover .productTitle {
-  color: #E22D2D; /* Назва товару буде підсвічуватись вашим фірмовим червоним при наведенні */
+  color: var(--accent-color); /* Назва товару буде підсвічуватись вашим фірмовим червоним при наведенні */
   transition: color 0.2s ease;
 }
 

@@ -23,8 +23,8 @@
   line-height: 1.2;
 }
 
-.highlight {
-  color: #E22D2D; /* Фірмовий червоний */
+.accentText {
+  color: var(--accent-color);
 }
 
 .subtitle {
@@ -79,7 +79,7 @@
 }
 
 .badgeSale {
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: #fff;
   font-size: 12px;
   font-weight: 600;
@@ -150,7 +150,7 @@
 .currentPrice {
   font-size: 20px;
   font-weight: 700;
-  color: #E22D2D;
+  color: var(--accent-color);
 }
 
 /* Кнопка "До кошика" в карточці */
@@ -184,7 +184,7 @@
   align-items: center;
   gap: 10px;
   padding: 14px 28px;
-  background-color: #E22D2D; /* Ваш фірмовий червоний */
+  background-color: var(--accent-color); /* Ваш фірмовий червоний */
   color: #ffffff;
   border: none;
   border-radius: 6px;

@@ -85,7 +85,7 @@
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #E22D2D;
+  border: 2px solid var(--accent-color);
 }
 
 .authorName {
@@ -110,7 +110,7 @@
 }
 
 .navButton:hover:not(:disabled) {
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: white;
 }
 
@@ -151,7 +151,7 @@
 }
 
 .pageDot.active {
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   transform: scale(1.2);
 }
 

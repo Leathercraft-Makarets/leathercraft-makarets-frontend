@@ -111,7 +111,7 @@
 }
 
 .deleteBtn:hover {
-  color: #E22D2D;
+  color: var(--accent-color);
   background-color: rgba(226, 45, 45, 0.1);
 }
 
@@ -149,7 +149,7 @@
 .checkoutButton {
   width: 100%;
   max-width: 100%;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: #ffffff;
   border: none;
   border-radius: 6px;

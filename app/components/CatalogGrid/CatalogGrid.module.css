@@ -1,3 +1,7 @@
+.accentText {
+  color: var(--accent-color);
+}
+
 .catalogSection {
   padding: 80px 0 60px 0;
   background-color: #f8f8f8;
@@ -95,7 +99,7 @@
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: #ffffff;
   border: none;
   border-radius: 6px;

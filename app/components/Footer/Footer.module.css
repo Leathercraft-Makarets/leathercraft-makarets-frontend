@@ -66,7 +66,7 @@
 }
 
 .link:hover {
-  color: #E22D2D;
+  color: var(--accent-color);
 }
 
 .socials {

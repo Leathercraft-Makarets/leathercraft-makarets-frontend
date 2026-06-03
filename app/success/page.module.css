@@ -48,7 +48,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
-  color: #E22D2D;
+  color: var(--accent-color);
 }
 
 .successTitle {
@@ -66,7 +66,7 @@
 
 .orderNumber {
   font-weight: 600;
-  color: #E22D2D;
+  color: var(--accent-color);
 }
 
 .successDate {
@@ -90,7 +90,7 @@
 }
 
 .infoBox svg {
-  color: #E22D2D;
+  color: var(--accent-color);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -266,7 +266,7 @@
 }
 
 .catalogButton {
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: #ffffff;
   border: none;
   border-radius: 6px;

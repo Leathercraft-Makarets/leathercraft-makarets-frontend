@@ -117,7 +117,7 @@
 .addToCart {
   flex-grow: 1;
   color: #ffffff;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   border: none;
   border-radius: 6px;
   padding: 12px;
@@ -361,7 +361,7 @@
 
 .cartButton {
   width: 100%;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   border: none;
   border-radius: 6px;
   padding: 10px;

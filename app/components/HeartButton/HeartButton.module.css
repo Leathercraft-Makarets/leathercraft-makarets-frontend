@@ -128,7 +128,7 @@
 }
 
 .favoriteBtn:hover {
-  background-color: #E22D2D36;
+  background-color: rgba(226, 45, 45, 0.21);
   transform: translateY(-2px);
 }
 
@@ -347,7 +347,7 @@
 
 .cartButton {
   width: 100%;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   border: none;
   border-radius: 6px;
   padding: 10px;
@@ -498,6 +498,6 @@
 
 .iconButton:hover {
   transform: translateY(-2px);
-  color: #E22D2D;
+  color: var(--accent-color);
 }
 

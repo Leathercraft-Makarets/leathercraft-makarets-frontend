@@ -1,3 +1,7 @@
+.accentText {
+  color: var(--accent-color);
+}
+
 .aboutSection {
   padding: 100px 0;
   background-color: #fff;
@@ -61,7 +65,7 @@
   align-items: center;
   gap: 10px;
   padding: 14px 28px;
-  background-color: #E22D2D; /* Фірмовий червоний */
+  background-color: var(--accent-color); /* Фірмовий червоний */
   color: #ffffff;
   border: none;
   border-radius: 6px;

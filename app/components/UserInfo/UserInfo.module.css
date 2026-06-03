@@ -46,7 +46,7 @@
   align-items: center;
   gap: 8px;
   padding: 14px 28px;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: #ffffff;
   border: none;
   border-radius: 6px;

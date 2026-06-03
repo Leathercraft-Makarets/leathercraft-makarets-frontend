@@ -1,6 +1,6 @@
 .addToCart {
   color: #ffffff;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   border: none;
   border-radius: 6px;
   padding: 12px;

@@ -80,7 +80,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: #E22D2D;
+  background-color: var(--accent-color);
   color: #ffffff;
   border-radius: 6px;
   font-size: 16px;

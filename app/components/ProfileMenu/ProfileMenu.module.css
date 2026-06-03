@@ -39,7 +39,7 @@
 
 .menuItem:hover .menuItemArrow {
   transform: translateX(4px);
-  color: #E22D2D;
+  color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
