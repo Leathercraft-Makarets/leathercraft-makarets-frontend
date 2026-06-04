@@ -13,6 +13,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 48px;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 768px) {

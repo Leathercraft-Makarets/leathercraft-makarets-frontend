@@ -14,7 +14,7 @@ const reviews = [
   },
   {
     id: 2,
-    name: "Олександр М.",
+    name: "Данієль М.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop",
     rating: 5,
     text: "Чудовий гаманець! Шкіра якісна, шви рівні. Використовую вже місяць — ніяких подряпин чи зносу. Дуже задоволений покупкою, рекомендую!"
@@ -116,7 +116,7 @@ export default function ReviewsSection() {
     <section className={styles.section}>
       <div className={styles.container}>
         {/* Заголовок */}
-        <h2 className={styles.title}>Відгуки</h2>
+        <h2 className={styles.title}><span className={styles.accentText}>В</span>ідгуки</h2>
 
         {/* Карусель */}
         <div className={styles.carousel}>

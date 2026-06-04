@@ -7,7 +7,7 @@ import styles from "./FaqSection.module.css";
 const faqs = [
   {
     id: 1,
-    question: <><span className={styles.accentText}>Яка</span> терміновість доставки замовлень?</>,
+    question: <><span className={styles.accentText}>Який</span> термін доставки замовлень?</>,
     answer: "Ми працюємо з перевізниками 'Нова Пошта' та 'Укрпошта'. Замовлення обробляється протягом 1-2 робочих днів. Доставка по Києву займає 1-2 дні, по Україні — 2-4 дні. Міжнародна доставка залежить від країни отримувача (зазвичай 7-14 днів)."
   },
   {
@@ -49,7 +49,7 @@ export default function FaqSection() {
       <div className={styles.container}>
         {/* Заголовок секції */}
         <div className={styles.header}>
-          <h2 className={styles.title}>Є питання?</h2>
+          <h2 className={styles.title}><span className={styles.accentText}>Є</span> пи<span className={styles.accentText}>т</span>ання<span className={styles.accentText}>?</span></h2>
           <p className={styles.subtitle}>
             Відповідаємо на найпоширеніші запитання наших клієнтів
           </p>

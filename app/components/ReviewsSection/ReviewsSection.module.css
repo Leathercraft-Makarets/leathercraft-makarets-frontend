@@ -188,3 +188,7 @@
     height: 36px;
   }
 }
+
+.accentText {
+  color: var(--accent-color);
+}

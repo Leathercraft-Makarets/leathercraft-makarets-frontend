@@ -29,7 +29,7 @@ h3,
     border: none;
     background-color: var(--accent-color);
     color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
     font-size: 1.25rem;
     font-weight: 700;
     cursor: pointer;
@@ -41,6 +41,5 @@ h3,
 
 .scrollToTopButton:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
     opacity: 1;
 }
