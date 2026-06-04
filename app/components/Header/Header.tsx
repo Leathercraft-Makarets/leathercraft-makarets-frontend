@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import styles from './Header.module.css';
-import LeathercraftMakaretsLogo from "@/logo/LeathercraftMakaretsLogo/LeathercraftMakaretsLogo.svg";
+import LeathercraftMakaretsLogo from "@/logo/LeathercraftMakaretsLogo/LeathercraftMakaretsLogo_radius10.svg";
 import NextLink from 'next/link';
 import { useStore } from '@/store/useStore';
 
