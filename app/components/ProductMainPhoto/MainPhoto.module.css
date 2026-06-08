@@ -1,9 +1,13 @@
+.wrapper {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 24px;
   background-color: #F5EDE8;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #333;
 }
 
@@ -35,7 +39,6 @@
 .imagePlaceholder {
   background-color: #f0f0f0;
   background-image: url("https://i.ibb.co/b5PBj3Pm/status-anxiety-wallet-is-now-better-black-3-lifestyle-img-234234.jpg");
-  /* background-image: repeating-conic-gradient(#f4f4f4 0% 25%, #eaeaea 0% 50%); */
   background-size: 500px 500px;
   border-radius: 8px;
   display: flex;
@@ -53,8 +56,12 @@
   background: transparent;
   border: none;
   font-size: 100px;
-  color: #888;
+  color: var(--accent-color);
   cursor: pointer;
+}
+
+.arrowBtn:hover {
+  transform: translateY(-2px);
 }
 
 .thumbnails {
@@ -130,22 +137,6 @@
   justify-content: center;
   gap: 8px;
   transition: background 0.2s;
-}
-
-.addToCart:hover {
-  background-color: #aa0d0d;
-}
-
-.favoriteBtn {
-  background-color: #d8dcd8;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
 
 .rating {
@@ -239,7 +230,6 @@
   margin: 0 auto;
   padding: 48px 24px;
   background-color: #fcfcf5;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .sectionTitle {
@@ -278,8 +268,9 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   background-color: #f0f0f0;
-  /* background-image: repeating-conic-gradient(#f4f4f4 0% 25%, #eaeaea 0% 50%); */ /* Потрібно динамічно замінювати на посилання на конкретні картинки */
-  background-size: 20px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -324,23 +315,6 @@
   margin: 0;
 }
 
-.priceContainer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.currentPrice {
-  font-size: 14px;
-  color: #333;
-}
-
-.oldPrice {
-  font-size: 12px;
-  color: #888;
-  text-decoration: line-through;
-}
-
 .favButton {
   background-color: #d8dcd8;
   border: none;
@@ -356,48 +330,9 @@
   transition: background-color 0.2s;
 }
 
-.favButton:hover {
-  background-color: #c8ccc8;
-}
-
-.cartButton {
-  width: 100%;
-  background-color: var(--accent-color);
-  border: none;
-  border-radius: 6px;
-  padding: 10px;
-  font-size: 14px;
-
-  color: #F5EDE8;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: background-color 0.2s;
-}
-
-.cartButton:hover {
-  background-color: #aa0d0d;
-}
-
-.cartButton span {
-  font-weight: bold !important;
-}
-
-.breadcrumbLink {
-  text-decoration: none;
-  color: #333333;
-}
-
-.breadcrumbLink:hover {
-  text-decoration: underline;
-  text-decoration-color: #333333;
-}
-
 .activeThumbnail {
   border: 2px solid #333333;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .thumbnail {
@@ -439,3 +374,21 @@
   border-color: rgba(0,0,0,0.2);
 }
 
+
+
+.iconButton {
+  background: transparent;
+  border: none;
+  color: #333333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.iconButton:hover {
+  transform: translateY(-2px);
+  color: var(--accent-color);
+}

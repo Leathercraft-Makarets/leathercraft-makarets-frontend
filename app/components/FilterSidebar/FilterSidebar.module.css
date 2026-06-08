@@ -26,16 +26,6 @@
   padding-bottom: 8px;
 }
 
-.icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.iconRotated {
-  rotate: 180deg;
-}
-
 .accordionContent {
   display: grid;
   transition: grid-template-rows 0.3s ease-out, opacity 0.3s ease-out, margin-top 0.3s ease;
@@ -235,13 +225,4 @@
   background-color: var(--accent-color);
   border-radius: 50%;
   cursor: pointer;
-}
-
-.arrowUpLogo {
-  height: 15px !important;
-  width: 15px !important;
-  object-fit: contain;
-  background-color: var(--accent-color);
-  padding: 5px;
-  border-radius: 50%;
 }

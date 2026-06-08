@@ -1,9 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import styles from './Description.module.css';
-import ArrowUpLogo from '@/logo/ArrowUpLogo/ArrowUpLogo.svg';
+import AccordionArrow from '@/components/AccordionArrow/AccordionArrow';
 
 const Description = () => {
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(true);
@@ -17,13 +16,7 @@ const Description = () => {
       <div className={styles.section}>
         <div className={styles.sectionHeader} onClick={toggleDescription}>
           <span>Опис</span>
-          <span className={`${styles.iconWrapper} ${!isDescriptionOpen ? styles.iconRotated : ''}`}>
-            <Image 
-              src={ArrowUpLogo} 
-              alt="Makarets Leathercraft" 
-              className={styles.arrowUpLogo}
-            />
-          </span>
+          <AccordionArrow isOpen={isDescriptionOpen} />
         </div>
         <div className={`${styles.accordionContent} ${isDescriptionOpen ? styles.open : styles.closed}`}>
           <div className={styles.colorsListInner}>

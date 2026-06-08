@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './LeftColumn.module.css';
-import MainPhoto from '../MainPhoto/MainPhoto';
+import MainPhoto from '../ProductMainPhoto/MainPhoto';
 import ActionPanel from '../ActionPanel/ActionPanel';
 import type { Product } from '@/store/useStore';
 

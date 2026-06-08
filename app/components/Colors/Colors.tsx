@@ -1,9 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import styles from './Colors.module.css';
-import ArrowUpLogo from '@/logo/ArrowUpLogo/ArrowUpLogo.svg';
+import AccordionArrow from '@/components/AccordionArrow/AccordionArrow';
 
 const COLORS = [
   '#E22D2D', 
@@ -26,13 +25,7 @@ const Colors = () => {
     <div className={styles.section}>
       <div className={styles.sectionHeader} onClick={toggleColors}>
         <span>Кольори</span>
-        <span className={`${styles.iconWrapper} ${!isColorsOpen ? styles.iconRotated : ''}`}>
-           <Image 
-              src={ArrowUpLogo} 
-              alt="Makarets Leathercraft" 
-              className={styles.arrowUpLogo}
-           />
-        </span>
+        <AccordionArrow isOpen={isColorsOpen} />
       </div>
       <div className={`${styles.accordionContent} ${isColorsOpen ? styles.open : styles.closed}`}>
         <div className={styles.colorsListInner}>

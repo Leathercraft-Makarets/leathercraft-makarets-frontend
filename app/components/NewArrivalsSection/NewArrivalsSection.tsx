@@ -47,14 +47,24 @@ const products = [
   }
 ];
 
-export default function NewArrivalsSection() {
+interface NewArrivalsSectionProps {
+  title?: string;
+}
+
+export default function NewArrivalsSection({ title }: NewArrivalsSectionProps) {
+  const heading = title ? (
+    title
+  ) : (
+    <>Новинки та <span className={styles.accentText}>гарячі пропозиції</span></>
+  );
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         {/* Заголовок */}
         <div className={styles.header}>
           <h2 className={styles.title}>
-            Новинки та <span className={styles.accentText}>гарячі пропозиції</span>
+            {heading}
           </h2>
           <p className={styles.subtitle}>
             Обирайте найкраще з нашої свіжої колекції

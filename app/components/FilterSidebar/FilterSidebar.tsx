@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import styles from './FilterSidebar.module.css';
 import ArrowUpLogoWhite from '@/logo/ArrowUpLogo/ArrowUpLogoWhite.svg';
+import AccordionArrow from '@/components/AccordionArrow/AccordionArrow';
 
 const COLORS_FIRST_SET = [
   '#E22D2D',
@@ -73,9 +73,7 @@ export default function FilterSidebar() {
       <div className={styles.filterSection}>
         <div className={styles.filterHeader} onClick={toggleMaterial}>
           <span>Матеріал</span>
-          <span className={`${styles.icon} ${isMaterialOpen ? styles.iconNotRotated : styles.iconRotated}`}>
-            <Image src={ArrowUpLogoWhite} alt="Makarets Leathercraft" className={styles.arrowUpLogo} />
-          </span>
+          <AccordionArrow isOpen={isMaterialOpen} arrowIcon={ArrowUpLogoWhite} />
         </div>
         <div className={`${styles.accordionContent} ${isMaterialOpen ? styles.open : styles.closed}`}>
           <div className={styles.accordionInner}>
@@ -98,9 +96,7 @@ export default function FilterSidebar() {
       <div className={styles.filterSection}>
         <div className={styles.filterHeader} onClick={toggleType}>
           <span>Тип</span>
-          <span className={`${styles.icon} ${isTypeOpen ? styles.iconNotRotated : styles.iconRotated}`}>
-            <Image src={ArrowUpLogoWhite} alt="Makarets Leathercraft" className={styles.arrowUpLogo} />
-          </span>
+          <AccordionArrow isOpen={isTypeOpen} arrowIcon={ArrowUpLogoWhite} />
         </div>
         <div className={`${styles.accordionContent} ${isTypeOpen ? styles.open : styles.closed}`}>
           <div className={styles.accordionInner}>
@@ -120,9 +116,7 @@ export default function FilterSidebar() {
       <div className={styles.filterSection}>
         <div className={styles.filterHeader} onClick={toggleForWhom}>
           <span>Для кого</span>
-          <span className={`${styles.icon} ${isForWhomOpen ? styles.iconNotRotated : styles.iconRotated}`}>
-            <Image src={ArrowUpLogoWhite} alt="Makarets Leathercraft" className={styles.arrowUpLogo} />
-          </span>
+          <AccordionArrow isOpen={isForWhomOpen} arrowIcon={ArrowUpLogoWhite} />
         </div>
         <div className={`${styles.accordionContent} ${isForWhomOpen ? styles.open : styles.closed}`}>
           <div className={styles.accordionInner}>
@@ -145,9 +139,7 @@ export default function FilterSidebar() {
       <div className={styles.filterSection}>
         <div className={styles.filterHeader} onClick={toggleColor}>
           <span>Кольори</span>
-          <span className={`${styles.icon} ${isColorOpen ? styles.iconNotRotated : styles.iconRotated}`}>
-            <Image src={ArrowUpLogoWhite} alt="Makarets Leathercraft" className={styles.arrowUpLogo} />
-          </span>
+          <AccordionArrow isOpen={isColorOpen} arrowIcon={ArrowUpLogoWhite} />
         </div>
         <div className={`${styles.accordionContent} ${isColorOpen ? styles.open : styles.closed}`}>
           <div className={styles.accordionInner}>
@@ -164,9 +156,7 @@ export default function FilterSidebar() {
       <div className={styles.filterSection}>
         <div className={styles.filterHeader} onClick={toggleMaterial}>
           <span>Розмір</span>
-          <span className={`${styles.icon} ${isMaterialOpen ? styles.iconNotRotated : styles.iconRotated}`}>
-            <Image src={ArrowUpLogoWhite} alt="Makarets Leathercraft" className={styles.arrowUpLogo} />
-          </span>
+          <AccordionArrow isOpen={isMaterialOpen} arrowIcon={ArrowUpLogoWhite} />
         </div>
         <div className={`${styles.accordionContent} ${isMaterialOpen ? styles.open : styles.closed}`}>
           <div className={styles.accordionInner}>
@@ -189,9 +179,7 @@ export default function FilterSidebar() {
       <div className={styles.filterSection}>
         <div className={styles.filterHeader} onClick={toggleSorting}>
           <span>Сортування</span>
-          <span className={`${styles.icon} ${!isSortingOpen ? styles.iconRotated : styles.iconNotRotated}`}>
-            <Image src={ArrowUpLogoWhite} alt="Makarets Leathercraft" className={styles.arrowUpLogo} />
-          </span>
+          <AccordionArrow isOpen={isSortingOpen} arrowIcon={ArrowUpLogoWhite} />
         </div>
         <div className={`${styles.accordionContent} ${isSortingOpen ? styles.open : styles.closed}`}>
           <div className={styles.accordionInner}>

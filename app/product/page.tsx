@@ -2,9 +2,9 @@
 
 import styles from "./page.module.css";
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
-import LeftColumn from "@/components/LeftColumn/LeftColumn";
-import RightColumn from "@/components/RightColumn/RightColumn";
-import RelatedProducts from "@/components/RelatedProducts/RelatedProducts";
+import LeftColumn from "@/components/ProductLeftColumn/LeftColumn";
+import RightColumn from "@/components/ProductRightColumn/RightColumn";
+import NewArrivalsSection from "@/components/NewArrivalsSection/NewArrivalsSection";
 import PageLayout from "@/components/PageLayout/PageLayout";
 
 const product = {
@@ -31,7 +31,7 @@ export default function ProductPage() {
           <RightColumn />
         </div>
         <div className={styles.container}>
-          <RelatedProducts />
+          <NewArrivalsSection title="Вам також може сподобатися" />
         </div>
       </div>
     </PageLayout>

@@ -484,12 +484,6 @@
   justify-content: center;
 }
 
-.arrowUpLogo {
-  height: 15px !important;
-  width: 15px;
-  object-fit: contain;
-}
-
 .headerLogo {
   height: 72px !important;
   width: 72px;
@@ -552,8 +546,4 @@
 .colorsListInner {
   min-height: 0;
   overflow: hidden;
-}
-
-.iconRotated {
-  rotate: calc(180deg);
 }

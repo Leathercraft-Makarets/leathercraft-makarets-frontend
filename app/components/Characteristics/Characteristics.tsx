@@ -1,8 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import styles from './Characteristics.module.css';
-import ArrowUpLogo from '@/logo/ArrowUpLogo/ArrowUpLogo.svg';
+import AccordionArrow from '@/components/AccordionArrow/AccordionArrow';
 import { useState } from 'react';
 
 const Characteristics = () => {
@@ -17,13 +16,7 @@ const Characteristics = () => {
       <div className={styles.section}>
         <div className={styles.sectionHeader} onClick={toggleCharacteristics}>
           <span>Характеристики</span>
-          <span className={`${styles.iconWrapper} ${!isCharacteristicsOpen ? styles.iconRotated : ''}`}>
-            <Image 
-              src={ArrowUpLogo} 
-              alt="Makarets Leathercraft" 
-              className={styles.arrowUpLogo}
-            />
-          </span>
+          <AccordionArrow isOpen={isCharacteristicsOpen} />
         </div>
         <div className={`${styles.accordionContent} ${isCharacteristicsOpen ? styles.open : styles.closed}`}>
           <div className={styles.colorsListInner}>

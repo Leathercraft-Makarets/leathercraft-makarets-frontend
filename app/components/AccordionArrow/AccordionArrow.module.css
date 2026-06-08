@@ -1,0 +1,24 @@
+.arrowWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  transition: rotate 0.3s ease-out;
+}
+
+.arrowOpen {
+  rotate: 0deg;
+}
+
+.arrowClosed {
+  rotate: 180deg;
+}
+
+.arrowIcon {
+  height: 15px !important;
+  width: 15px !important;
+  object-fit: contain;
+}
