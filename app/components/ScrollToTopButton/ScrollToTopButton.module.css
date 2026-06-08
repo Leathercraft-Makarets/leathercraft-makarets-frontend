@@ -1,0 +1,39 @@
+.scrollToTopButton {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.scrollToTopButton:hover {
+  transform: scale(1.08);
+}
+
+/* Клас, який активується через JS, коли користувач проскролив вниз */
+.scrollToTopButton.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Стилі для адаптивної SVG-іконки всередині кнопки */
+.icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
